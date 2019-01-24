@@ -1,13 +1,47 @@
+<html>
+<head>
+  <style>
+
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  color: black;
+  font-family: Bookman;
+  font-size: 300%;
+}
+p {
+  color: black;
+  font-family: Bookman;
+  font-size: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+</style>
+</head>
+
+<div text-align: center>
 <h1>Hello there!</h1>
-<div>
   <form action="/birthday" method="post">
-  <label for="name">What's your name?</label>
+  <p><label for="name">What's your name?</label>
   <br>
-  <input type="text" name="name">
-  </div>
-  <label for="date">What's your birth date?</label>
-  <br>
-  Day:  <input type="text" name="birth_date">
+  <input type="text" name="name"></p>
+  <p><label for="date">What's your birth date?</label><br>
+  Day:  <input type="text" name="birth_date"></p>
   Month:  <div class="custom-select" style="width:200px;">
   <select name="birth_month">
     <option value=1>January</option>
@@ -23,8 +57,9 @@
     <option value=11>November</option>
     <option value=12>December</option>
   </select>
-</div>
-<div>
+
 <input type="submit" value="Submit">
-</div>
 </form>
+</div>
+
+</html>

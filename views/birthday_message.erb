@@ -1,3 +1,38 @@
+<html>
+<head>
+  <style>
+
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  color: black;
+  font-family: Bookman;
+  font-size: 300%;
+}
+p {
+  color: black;
+  font-family: Bookman;
+  font-size: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+</style>
+</head>
 
 <% if @birth_date == @today_date && @birth_month == @today_month %>
 <h2>Happy birthday!</h2>
@@ -5,3 +40,5 @@
 <%@date = Date.new(2019, @birth_month, @birth_date) - Date.today%>
 <h2>Your birthday is in <%= @date.to_i %> days</h2>
 <% end %>
+
+</html>
