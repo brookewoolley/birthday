@@ -10,8 +10,8 @@ class Birthday < Sinatra::Base
 
   post '/birthday' do
     session[:name] = params[:name]
-    session[:birth_date] = params[:birth_date]
-    session[:birth_month] = params[:birth_month]
+    session[:birth_date] = params[:birth_date].to_i
+    session[:birth_month] = params[:birth_month].to_i
     redirect "/birthday_message"
   end
 
