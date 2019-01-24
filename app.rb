@@ -12,6 +12,7 @@ class Birthday < Sinatra::Base
     session[:name] = params[:name]
     session[:birth_date] = params[:birth_date].to_i
     session[:birth_month] = params[:birth_month].to_i
+    p params
     redirect "/birthday_message"
   end
 
