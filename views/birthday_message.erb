@@ -35,10 +35,17 @@ body {
 </head>
 
 <% if @birth_date == @today_date && @birth_month == @today_month %>
-<h2>Happy birthday!</h2>
-<% else %>
-<%@date = Date.new(2019, @birth_month, @birth_date) - Date.today%>
-<h2>Your birthday is in <%= @date.to_i %> days</h2>
+  <h2>Happy birthday <%= @name %>!</h2>
+<% elsif %>
+  <% @birthday = Date.new(2019, @birth_month, @birth_date) %>
+  <% @date = DateTime.now %>
+  <% @day_count = @birthday - @date %>
+    <% if @day_count < 0
+          @new_day_count = @day_count + 366 %>
+          <h2><%= @name %>, your birthday is in <%= @new_day_count.to_i %> days</h2>
+    <% else %>
+      <h2><%= @name %>, your birthday is in <%= @day_count.to_i %> days</h2>
+    <% end %>
 <% end %>
 
 </html>
