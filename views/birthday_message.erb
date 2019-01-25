@@ -6,15 +6,11 @@ body {
   background-color: powderblue;
 }
 
-h1 {
+h2 {
   color: black;
-  font-family: Bookman;
-  font-size: 300%;
-}
-p {
-  color: black;
-  font-family: Bookman;
-  font-size: 100%;
+  font-family: Helvetica;
+  font-size: 200%;
+  text-align: center
 }
 
 html, body {
@@ -42,9 +38,9 @@ body {
   <% @day_count = @birthday - @date %>
     <% if @day_count < 0
           @new_day_count = @day_count + 366 %>
-          <h2><%= @name %>, your birthday is in <%= @new_day_count.to_i %> days</h2>
+          <h2><%= @name %>, your birthday is in <%= @new_day_count.to_i %> days!</h2>
     <% else %>
-      <h2><%= @name %>, your birthday is in <%= @day_count.to_i %> days</h2>
+      <h2><%= @name %>, your birthday is in <%= @day_count.to_i %> days!</h2>
     <% end %>
 <% end %>
 
